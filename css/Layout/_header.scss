@@ -1,0 +1,283 @@
+header {
+  .banner {
+    height: calc(100vh - 7rem);
+    position: relative;
+    @include respond(sp) {
+      height: 33.5rem;
+    }
+    &--logo {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include respond(sp) {
+        top: 104%;
+        left: 2rem;
+        height: auto;
+        img {
+          width: 20.5rem;
+        }
+      }
+      h1 {
+        font-family: $font-noto;
+        font-size: 1.5rem;
+        line-height: 6.657rem;
+        letter-spacing: 0.3rem;
+        font-weight: 500;
+        @include respond(sp) {
+          font-size: 1rem;
+          line-height: 3.3rem;
+        }
+      }
+    }
+    &--image {
+      width: calc(50vw + 35rem);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        @include respond(sp) {
+          width: 100%;
+        }
+      }
+      @include respond(sp) {
+        width: 100%;
+        height: 27.9rem;
+        object-fit: cover;
+        margin-top: 5rem;
+      }
+    }
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $font-noto;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+    @include respond(sp) {
+      display: block;
+      background-color: $color-white;
+      height: 5rem;
+      box-shadow: 2px -4px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+    .header--logo {
+      display: flex;
+      align-items: center;
+      padding-left: 4rem;
+      &__image {
+        img {
+          width: 100%;
+        }
+      }
+      &__slogan {
+        font-size: 1.2rem;
+        letter-spacing: 0.24rem;
+        margin-left: 2rem;
+      }
+      @include respond(sp) {
+        padding-left: 0;
+        height: 5rem;
+        width: 100%;
+        &__image {
+          img {
+            padding-left: 2rem;
+            display: block;
+            width: 75%;
+          }
+        }
+        &__slogan {
+          display: none;
+        }
+      }
+    }
+    .header--menu {
+      display: flex;
+      align-items: center;
+      transition: 0.5s;
+      @include respond(sp) {
+        display: block;
+        background-color: $color-white;
+        height: 100vh;
+        transform: translateX(100%);
+      }
+      &__link {
+        .items-active {
+          a {
+            color: $color-text-hover;
+          }
+        }
+        li {
+          padding: 0 3.5rem;
+          text-align: center;
+          @include respond(pc) {
+            padding: 0 2.6rem;
+          }
+          @include respond(sp) {
+            padding: 2rem 0;
+            &:first-child {
+              padding-top: 2.5rem;
+            }
+          }
+          &:hover {
+            a {
+              color: $color-text-hover;
+            }
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+          a {
+            color: $color-black;
+            font-weight: 500;
+            font-size: 1.7rem;
+            @include respond(sp) {
+              font-size: 2rem;
+            }
+          }
+        }
+        span {
+          display: block;
+          color: $color-breadcrumb;
+          font-size: 1.1rem;
+          @include respond(sp) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      &__social {
+        margin: 0 5rem;
+        @include respond(pc) {
+          margin: 0 3rem;
+        }
+        @include respond(sp) {
+          ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 3.5rem;
+            a {
+              img {
+                width: 50%;
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+        li {
+          &:nth-child(2) {
+            margin: 0 3rem;
+            @include respond(pc) {
+              margin: 0 4rem;
+            }
+            @include respond(sp) {
+              margin: 0 1rem 0 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .show {
+      transform: translateX(0);
+    }
+    &-home {
+      position: relative;
+      height: 7rem;
+      transition: padding 0s;
+      @include respond(sp) {
+        height: 5rem;
+        position: fixed;
+      }
+      .header--logo {
+        &__image {
+          display: none;
+          @include respond(sp) {
+            display: block;
+          }
+        }
+        &__slogan {
+          display: none;
+        }
+      }
+    }
+  }
+  .sticky {
+    position: fixed;
+    height: 7rem;
+    background-color: white;
+    @include respond(sp) {
+      height: 5rem;
+    }
+    .header--logo {
+      &__image {
+        display: block;
+      }
+      &__slogan {
+        display: block;
+      }
+    }
+  }
+}
+
+.hamburger {
+  top: 50%;
+  left: 10%;
+  width: 25px;
+  height: 2px;
+  background: $color-text-title;
+  position: absolute;
+  transition: 0.5s;
+  &::before {
+    top: -8px;
+  }
+  &::after {
+    top: 8px;
+  }
+  &-ani {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background: $color-text-title;
+      transition: 0.5s;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.icon.change {
+  .hamburger-ani {
+    background: rgba(0, 0, 0, 0);
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(225deg);
+    }
+  }
+}

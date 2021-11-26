@@ -1,0 +1,578 @@
+.shop-about {
+  margin-top: 11rem;
+  height: 28rem;
+  @include respond(sp) {
+    height: 18.75rem;
+    margin-top: 0rem;
+  }
+  .title-box {
+    height: 25rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    @include respond(sp) {
+      height: 22rem;
+    }
+    .title {
+      position: relative;
+      h1 {
+        font-weight: 400;
+        font-family: $font-play;
+        font-style: italic;
+        font-size: 12rem;
+        color: $color-title;
+      }
+      span {
+        display: block;
+        font-family: $font-noto;
+        font-size: 2.8rem;
+        color: $color-black;
+        font-weight: 500;
+        letter-spacing: 0.5rem;
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @include respond(sp) {
+        h1 {
+          font-size: 7rem;
+        }
+        span {
+          font-size: 1.8rem;
+          letter-spacing: 0.15rem;
+        }
+      }
+    }
+  }
+  .breadcrumb {
+    display: flex;
+    justify-content: end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    margin-right: 3rem;
+    align-items: center;
+    font-size: 1.2rem;
+    color: $color-breadcrumb;
+    @include respond(sp) {
+      display: none;
+    }
+  }
+}
+
+.store {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 32rem;
+    background-color: $color-text-title;
+    z-index: 1;
+  }
+  &--box {
+    position: relative;
+    z-index: 2;
+    &__move {
+      padding: 6rem 10rem 8.5rem 10rem;
+      background-color: $color-white;
+      box-shadow: 7.193px 6.947px 10px 0px rgba(0, 0, 0, 0.1);
+      transform: translateY(4rem);
+      @include respond(sp) {
+        padding: 3rem 0;
+        transform: translateY(2.5rem);
+      }
+      .box--title {
+        text-align: center;
+        position: relative;
+        h1 {
+          font-family: $font-noto;
+          font-size: 3.4rem;
+          letter-spacing: 0.4rem;
+          color: $color-text-title;
+          font-weight: 400;
+          @include respond(sp) {
+            font-size: 2.2rem;
+            letter-spacing: 0.2rem;
+          }
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          width: 5rem;
+          height: 1px;
+          bottom: -2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $color-text-title;
+          @include respond(sp) {
+            width: 4rem;
+          }
+        }
+      }
+      .box--desc {
+        padding: 6.4rem 0rem 6.5rem 20rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.07rem;
+        line-height: 3.2rem;
+        @include respond(pc) {
+          padding: 6.4rem 10rem 6.5rem 10rem;
+        }
+        @include respond(sp) {
+          text-align: center;
+          padding: 3.9rem 0 3rem 0;
+          font-size: 1.3rem;
+        }
+        .desc-map {
+          span {
+            color: $color-text-hover;
+            img {
+              transform: translateY(18%);
+              margin-left: 0.5rem;
+            }
+          }
+          @include respond(sp) {
+            line-height: 2.2rem;
+          }
+        }
+        .desc-phone {
+          letter-spacing: 0.08rem;
+          font-size: 1.6rem;
+          font-weight: bold;
+          img {
+            transform: translateY(18%);
+            @include respond(sp) {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+          @include respond(sp) {
+            color: $color-text-hover;
+            font-size: 1.4rem;
+            margin: 0.5rem 0;
+          }
+        }
+        .desc-active {
+          span {
+            font-weight: bold;
+          }
+          @include respond(sp) {
+            line-height: 2.2rem;
+          }
+        }
+      }
+      .box--image {
+        position: relative;
+        &__show {
+          max-height: 52rem;
+          display: none;
+          overflow: hidden;
+          margin-bottom: 1rem;
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+        .caption-container {
+          background-color: rgba(34, 34, 34, 0.8);
+          height: 5rem;
+          line-height: 5rem;
+          margin-bottom: -5rem;
+          color: $color-white;
+          transform: translateY(-6rem);
+          p {
+            font-size: 1.4rem;
+            color: $color-white;
+            padding-left: 2rem;
+            letter-spacing: 0.14rem;
+          }
+          @include respond(sp) {
+            height: 2.5rem;
+            line-height: 2.5rem;
+            margin-bottom: -2.5rem;
+            transform: translateY(-3.5rem);
+            p {
+              font-size: 1rem;
+              padding-left: 1rem;
+              letter-spacing: 0.01rem;
+            }
+          }
+        }
+        &__items {
+          display: flex;
+          justify-content: space-between;
+          .items {
+            width: calc((100% - 2.4rem) / 4);
+            cursor: pointer;
+            position: relative;
+            img {
+              display: block;
+            }
+          }
+          .current {
+            position: relative;
+            &::after {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+  &--info {
+    padding: 13.5rem 10rem 8rem 10rem;
+    h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: $color-black-gray;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.07rem;
+      padding: 3rem 0;
+    }
+    @include respond(sp) {
+      padding: 6.3rem 0 5rem 0;
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.3rem;
+        letter-spacing: 0.04rem;
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+
+.theme {
+  background-color: $color-gray-bg-2;
+  padding: 7rem 0 7rem 0;
+  @include respond(sp) {
+    padding: 4.3rem 0 4.3rem 0;
+  }
+  &--box {
+    padding: 0 10rem 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__img {
+      width: 32%;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__text {
+      width: 68%;
+      padding-left: 5rem;
+      h4 {
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.07rem;
+      }
+    }
+    @include respond(sp) {
+      padding: 0;
+      display: block;
+      &__img {
+        width: 100%;
+      }
+      &__text {
+        width: 100%;
+        padding: 0;
+        h4 {
+          display: none;
+        }
+        p {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.address {
+  padding: 7rem 0 7rem 0;
+  @include respond(sp) {
+    padding: 5rem 0 4.5rem 0;
+    .container {
+      padding: 0;
+    }
+  }
+  &--box {
+    padding: 0 10rem 0 10rem;
+    &__img {
+      position: relative;
+      margin-bottom: 3.5rem;
+      @include respond(sp) {
+        margin-bottom: 1.2rem;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        font-size: 4rem;
+        color: $color-text-map;
+        font-weight: bold;
+        position: absolute;
+        bottom: 11.5rem;
+        width: 100%;
+        left: 0px;
+        text-align: center;
+      }
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      .info-image {
+        margin-right: 3rem;
+      }
+      .info-text {
+        font-size: 1.4rem;
+        .company-info {
+          letter-spacing: 0.07rem;
+          color: $color-black-gray;
+          font-weight: bold;
+        }
+        .phone {
+          font-weight: normal;
+        }
+        .company-address {
+          margin: 1.5rem 0;
+        }
+      }
+    }
+    @include respond(sp) {
+      padding: 0;
+      &__img {
+        p {
+          font-size: 2rem;
+          bottom: 50%;
+          transform: translateY(50%);
+        }
+      }
+      &__info {
+        padding: 0 2rem;
+        .info-image {
+          display: none;
+        }
+        .info-text {
+          font-size: 1.3rem;
+          .company {
+            letter-spacing: 0.07rem;
+            color: $color-black-gray;
+            font-weight: bold;
+          }
+          .phone {
+            img {
+              width: 1rem;
+              height: 1rem;
+            }
+            font-weight: normal;
+            color: $color-text-hover;
+          }
+          .company-address {
+            margin: 1.5rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: $color-white;
+  padding-top: 6.5rem;
+  text-align: center;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -7.4rem;
+    left: 0;
+    right: 0;
+    height: 19rem;
+    z-index: 0;
+    background-color: $color-text-title;
+  }
+  @include respond(sp) {
+    padding-top: 3.5rem;
+    &::after {
+      height: 7rem;
+      bottom: -2.4rem;
+    }
+  }
+  &--title {
+    font-family: $font-noto;
+    h3 {
+      display: inline-block;
+      font-weight: 300;
+      font-size: 2.8rem;
+      letter-spacing: 0.3rem;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        left: -12rem;
+        bottom: 22%;
+        width: 11rem;
+        height: 1px;
+        background-color: $color-black;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        right: -12rem;
+        bottom: 22%;
+        width: 11rem;
+        height: 1px;
+        background-color: $color-black;
+      }
+    }
+    span {
+      font-size: 1.8rem;
+    }
+    @include respond(sp) {
+      h3 {
+        font-size: 2.3rem;
+        &::before {
+          width: 5rem;
+          left: -6rem;
+        }
+        &::after {
+          width: 5rem;
+          right: -6rem;
+        }
+      }
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  &--desc {
+    margin: 3rem 0 5.5rem 0;
+    font-size: 1.2rem;
+    line-height: 2.16rem;
+    color: $color-desc;
+    letter-spacing: 0.06rem;
+    @include respond(sp) {
+      margin-bottom: 3rem;
+      padding: 0 2.5rem;
+      p {
+        display: flex;
+        text-align: left;
+        span {
+          margin-right: 0.5rem;
+        }
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  &--method {
+    display: flex;
+    margin-bottom: 8rem;
+    padding: 0 10rem;
+    h3 {
+      font-family: $font-noto;
+      font-size: 1.6rem;
+      letter-spacing: 0.08rem;
+      font-weight: 400;
+      margin-bottom: 3.5rem;
+      @include respond(sp) {
+        font-size: 1.3rem;
+        margin-bottom: 1.3rem;
+      }
+    }
+    &__web {
+      width: 50%;
+    }
+    &__phone {
+      width: 50%;
+      .phone-number {
+        font-size: 4.6rem;
+        letter-spacing: 0.23rem;
+        font-family: $font-noto;
+        color: $color-text-hover;
+        display: block;
+        margin-top: -1.6rem;
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+          @include respond(sp) {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+      }
+      .detail-open {
+        display: flex;
+        justify-content: center;
+        font-size: 1.4rem;
+        span {
+          font-weight: bold;
+        }
+        p {
+          margin: 0 1.5rem;
+        }
+      }
+    }
+    @include respond(sp) {
+      padding: 0;
+      display: block;
+      margin-bottom: 5rem;
+      &__web {
+        width: 100%;
+      }
+      &__phone {
+        width: 100%;
+        margin-top: 3.5rem;
+        .detail {
+          margin-top: -1.5rem;
+          &-btn {
+            margin: 1rem 0 1.8rem 0;
+          }
+        }
+        .phone-number {
+          font-size: 3.5rem;
+          letter-spacing: 0.35rem;
+          display: block;
+          margin-top: 0;
+        }
+        .detail-open {
+          display: block;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  &--image {
+    display: flex;
+    padding: 0 10rem;
+    position: relative;
+    z-index: 2;
+    &__items {
+      width: 100%/3;
+      img {
+        width: 100%;
+      }
+    }
+    @include respond(sp) {
+      padding: 0;
+    }
+  }
+}

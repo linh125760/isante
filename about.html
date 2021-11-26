@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Shop 店舗情報</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./image/home/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header--logo">
+                <div class="header--logo__image">
+                    <a href="index.html">
+                        <img src="./image/about/logo.png" alt="isante">
+                    </a>
+                </div>
+                <div class="header--logo__slogan">
+                    <p>鍼灸サロン アイサンテ</p>
+                </div>
+                <div id="icon" class="icon sp-on">
+                    <div class="hamburger hamburger-ani"></div>
+                </div>
+            </div>
+            <div class="header--menu">
+                <div class="header--menu__link">
+                    <ul>
+                        <li class="list"><a href="index.html">Concept <span>コンセプト</span></a></li>
+                        <li class="list items-active"><a href="#">Shop <span>店舗情報</span></a></li>
+                        <li class="list"><a href="#">Menu <span>メニュー</span></a></li>
+                        <li class="list"><a href="#">Company Profile <span>会社情報</span></a></li>
+                        <li class="list"><a href="#">Network <span>連携医療機関</span></a></li>
+                    </ul>
+                </div>
+                <div class="header--menu__social">
+                    <ul>
+                        <li><a href="#"><img class="social-ig sp-on" src="./image/home/ig-sp-none.png" alt=""><img class="social-ig sp-off" src="./image/home/ig-none.png" alt=""></a></li>
+                        <li><a href="#"><img class="social-tw sp-on" src="./image/home/tw-sp-none.png" alt=""><img class="social-tw sp-off" src="./image/home/tw-none.png" alt=""></a></li>
+                        <li><a href="#"><img class="social-fb sp-on" src="./image/home/fb-sp-none.png" alt=""><img class="social-fb sp-off" src="./image/home/fb-none.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Shop About Section -->
+    <section class="shop-about">
+        <div class="title-box">
+            <div class="container">
+                <div class="title">
+                    <h1>Shop</h1>
+                    <span>店舗情報</span>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <p>トップページ</p>
+            <span class="arrow right"></span>
+            <p>店舗情報 本店</p>
+        </div>
+    </section>
+    <!-- End Shop About Section -->
+    <!-- Store Section -->
+    <section class="store">
+        <div class="container">
+            <div class="store--box">
+                <div class="store--box__move">
+                    <div class="box--title">
+                        <h1>isante 本店</h1>
+                    </div>
+                    <div class="box--desc">
+                        <p class="desc-map">〒060-0061　<br class="sp-on">札幌市中央区南1条西5丁目16番地<br class="sp-on">プレジデント松井ビル1005階 <br class=" sp-on"><span><img src="./image/about/icon-map.png" alt=""> MAP</span></p>
+                        <p class="desc-phone"><span><img src="./image/about/icon-phone.png" alt=""></span> 011-211-4490</p>
+                        <p class="desc-active"><span>営業時間　</span><br class="sp-on">9：00〜21：00</p>
+                        <p class="desc-active"><span>定休日　</span><br class="sp-on">日曜・祝日・年末年始</p>
+                    </div>
+                    <div class="box--image">
+                        <div class="box--image__show">
+                            <img src="./image/about/box-1-large.png" alt="">
+                        </div>
+                        <div class="box--image__show">
+                            <img src="./image/about/box-2-large.png" alt="">
+                        </div>
+                        <div class="box--image__show">
+                            <img src="./image/about/box-3-large.png" alt="">
+                        </div>
+                        <div class="box--image__show">
+                            <img src="./image/about/box-4-large.png" alt="">
+                        </div>
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                        <div class="box--image__items">
+                            <div class="items"><img class="choose" src="./image/about/box-1.png" alt=""
+                                    onclick="currentSlide(1)"></div>
+                            <div class="items"><img class="choose" src="./image/about/box-2.png" alt=""
+                                    onclick="currentSlide(2)"></div>
+                            <div class="items"><img class="choose" src="./image/about/box-3.png" alt=""
+                                    onclick="currentSlide(3)"></div>
+                            <div class="items"><img class="choose" src="./image/about/box-4.png" alt=""
+                                    onclick="currentSlide(4)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="store--info">
+                <h3>鍼灸サロン　isante（アイサンテ）</h3>
+                <p>皆様の心に寄り添い、心と体のバランスを大切にして、自覚されていない不調も読み取り、お身体の辛い症状、お肌の不調などを取り除き、良い状態を保てるように鍼灸治療を行っていきます。</p>
+
+                <a href="#" class="btn btn-large">Webからのご予約はこちら</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Store Section -->
+    <!-- Theme Section -->
+    <section class="theme">
+        <div class="container">
+            <h3 class="title-section-about">トピックス</h3>
+            <div class="theme--box">
+                <div class="theme--box__img">
+                    <img src="./image/about/theme.png" alt="">
+                </div>
+                <div class="theme--box__text">
+                    <h4 class="theme-title">代謝アップと美脚ケア</h4>
+                    <p>疲れがとれない、イライラする、脚がむくむ、そのような状態は代謝が落ちている証拠です。そこで代謝のカギを握るのが「第2の心臓」といわれる「ふくらはぎ」です。ふくらはぎの筋肉が凝って血流が滞り全身の血流が悪くなると、代謝ダウンにつながります。<br>ふくらはぎにある代謝に効くツボを刺激して、代謝をアップさせると同時に、脚が引き締まって美脚の効果も期待できます。是非お試しください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Theme Section -->
+    <!-- Address Section -->
+    <section class="address">
+        <div class="container">
+            <h3 class="title-section-about">アクセス</h3>
+            <div class="address--box">
+                <div class="address--box__img">
+                    <div class="sp-off">
+                        <img src="./image/about/map-1.png" alt="">
+                    </div>
+                    <div class="sp-on">
+                        <img src="./image/about/map-sp.png" alt="">
+                    </div>
+                    <p>Googleマップがはいります</p>
+                </div>
+                <div class="address--box__info">
+                    <div class="info-image">
+                        <img src="./image/about/map-2.png" alt="">
+                    </div>
+                    <div class="info-text">
+                        <p class="company-info">isante（アイサンテ） 本店 <br class=" sp-on"><span class="phone"><img src="./image/about/icon-phone.png" alt=""> 011-211-4490</span></p>
+                        <p class="company-address">〒060-0061　<br class="sp-on">札幌市中央区南1条西5丁目16番地 プレジデント松井ビル100 5階</p>
+                        <p class="time">・地下鉄 大通駅 10番出口より徒歩3分</p>
+                        <p class="time">・地下鉄 大通駅 1番出口より徒歩2分</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Address Section -->
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact--title">
+                <h3><span>isante 本店</span><br>来店予約</h3>
+            </div>
+            <div class="contact--desc">
+                <p><span>※</span> 予約・予約時間の変更・キャンセルは前日までにお願いいたします。</p>
+                <p><span>※</span> 連絡がなく予約時間を過ぎた場合はキャンセルとなりますのでご了承ください。</p>
+            </div>
+            <div class="contact--method">
+                <div class="contact--method__web">
+                    <h3>Webから予約されるお客様</h3>
+                    <a href="#" class="btn btn-large">Webからのご予約はこちら</a>
+                </div>
+                <div class="contact--method__phone">
+                    <h3>お電話で予約されるお客様</h3>
+                    <div class="detail">
+                        <p class="phone-number"><img src="./image/about/phone.png" alt=""> 011-211-4490</p>
+                        <div class="sp-on detail-btn">
+                            <a href="#" class="btn btn-medium">電話をかける</a>
+                        </div>
+                        <div class="detail-open">
+                            <p><span>受付時間</span> 9:00〜20:00</p>
+                            <p><span>定休日 日曜、祝日、</span>年末年始</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact--image">
+                <div class="contact--image__items"><img src="./image/about/contact-1.png" alt=""></div>
+                <div class="contact--image__items"><img src="./image/about/contact-2.png" alt=""></div>
+                <div class="contact--image__items"><img src="./image/about/contact-3.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+    <!-- Footer -->
+    <footer class="footer-about">
+        <div class="container">
+            <div class="footer">
+                <div class="copy-right">
+                    <div class="copy-right--image">
+                        <a href="#"><img src="./image/about/logo-footer.png" alt=""></a>
+                    </div>
+                    <p>Copyright&copy;isante.All rights reserved.</p>
+                </div>
+                <button id="myBtn">プライバシーポリシー</button>
+                <div id="myModal" class="modal">
+                    <div class="modal--content">
+                        <span class="close"></span>
+                        <div class="modal--content__text">
+                            <h3>プライバシーポリシー</h3>
+                            <div class="policy">
+                                <p class="policy--title">個人情報保護方針ダミータイトル</p>
+                                <p class="policy--text">これはダミーテキストです当社は、当社の提供する各種サービス及びウェブサイト（以下併せて「本サービス」といいます。）を利用するお客様の情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本プライバシーポリシー」といいます。）を定めます。EU域内の方はこちらをご覧ください。これはダミーテキストです</p>
+                                <p class="policy--title">1. 個人情報の定義についてダミータイトル</p>
+                                <div class="padding-left">
+                                    <p class="policy--text">これはダミーテキストです個人情報とは、住所、氏名、勤務先、肩書き、役職、電話番号、メールアドレス、その他特定の個人として識別することができる情報（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるこれはダミーテキストです</p>
+                                    <p class="policy--title small">個人情報のお問合せ先</p>
+                                    <p class="policy--text">〒000-0000 東京都渋谷区ダミーテキストです<br><span>宛先ダミーテキストです</span><br><span>お問い合わせ電話番号：</span>000-000-0000<br></p>
+                                </div>
+                            </div>
+                            <div class="space"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

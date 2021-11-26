@@ -1,0 +1,29 @@
+.outer {
+  @include respond(sp) {
+    display: none;
+  }
+  position: absolute;
+  bottom: 18rem;
+  right: 90%;
+
+  .inner {
+    font-size: 1.3rem;
+    letter-spacing: 0.07rem;
+    font-family: $font-noto;
+  }
+
+  .rotate {
+    position: relative;
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $color-black;
+      top: 64%;
+      left: -18rem;
+      animation: scroll 2s ease-in-out infinite;
+    }
+  }
+}

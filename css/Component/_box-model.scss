@@ -1,0 +1,140 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 111;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  &--content {
+    background-color: $color-white;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 7rem 5rem 5rem 5rem;
+    width: 100%;
+    max-width: 100rem;
+    max-height: 67rem;
+    @include respond(sp) {
+      max-width: 90%;
+      height: 90%;
+      padding: 7rem 1.5rem 2.5rem 1.5rem;
+      overflow: hidden;
+    }
+    &__text {
+      color: $color-black;
+      max-height: 55rem;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 0.8rem;
+        @include respond(sp) {
+          width: 0.5rem;
+        }
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-text-hover;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #d3d3d3;
+      }
+      scrollbar-face-color: $color-text-hover;
+      scrollbar-shadow-color: $color-text-hover;
+      scrollbar-width: 0.8rem;
+      h3 {
+        font-family: $font-noto;
+        font-size: 2.8rem;
+        letter-spacing: 0.28rem;
+        color: $color-text-title;
+        font-weight: 400;
+        margin-bottom: 3rem;
+        @include respond(sp) {
+          font-size: 2rem;
+          letter-spacing: 0.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .policy {
+        &--title {
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+          @include respond(sp) {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+          }
+        }
+        &--text {
+          padding-right: 1.5rem;
+          font-size: 1.3rem;
+          line-height: 2.6rem;
+          margin-bottom: 3.5rem;
+          letter-spacing: 0.04rem;
+          span {
+            font-weight: bold;
+          }
+          @include respond(sp) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            margin-bottom: 1.5rem;
+          }
+        }
+        .small {
+          font-size: 1.3rem;
+          @include respond(sp) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .padding-left {
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  right: 2.5rem;
+  top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  @include respond(sp) {
+    right: 0.75rem;
+    top: 1rem;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    left: 1.5rem;
+    content: " ";
+    height: 4rem;
+    width: 0.2rem;
+    background-color: $color-text-hover;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+#myBtn {
+  position: relative;
+  text-align: right;
+  &::after {
+    content: url(../image/about/icon-btn.png);
+    margin-left: 0.5rem;
+  }
+  @include respond(sp) {
+    width: 100%;
+    margin-left: 1.05rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+@import "./Abstracts/mixin";
+@import "./Abstracts/variables";
+@import "./Abstracts/animation";
+
+@import "./Base/animations";
+@import "./Base/base";
+@import "./Base/typography";
+
+@import "./Layout/header";
+@import "./Layout/footer";
+
+@import "./Pages/home";
+@import "./Pages/about";
+
+@import "./Component/btn";
+@import "./Component/arrow";
+@import "./Component/box-model";
+@import "./Component/scroll";

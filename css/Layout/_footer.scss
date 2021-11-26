@@ -1,0 +1,58 @@
+footer {
+  background-color: $color-text-title;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  @include respond(sp) {
+    height: 14.5rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+    .copy-right {
+      display: flex;
+      align-items: center;
+      p {
+        font-family: $font-noto;
+        font-size: 1.1rem;
+        letter-spacing: 0.065rem;
+        margin-left: 3.4rem;
+      }
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: 0.4s;
+      position: relative;
+      font-size: 1.4rem;
+      letter-spacing: 0.05rem;
+      @include respond(sp) {
+        font-size: 1.3rem;
+      }
+    }
+    @include respond(sp) {
+      flex-direction: column-reverse;
+      .copy-right {
+        flex-direction: column;
+        &--image {
+          margin: 1.3rem 0 1.6rem 0;
+        }
+        p {
+          font-size: 0.9rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+.footer-about {
+  margin-top: 7.4rem;
+  @include respond(sp) {
+    margin-top: 2.2rem;
+  }
+}

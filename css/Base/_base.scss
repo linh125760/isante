@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden
+}
+body {
+  font-family: $font-hira;
+  overflow-x: hidden;
+  background-color: $color-background;
+}
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  @include respond(pc) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.sp-on {
+  display: none;
+  @include respond(sp) {
+    display: block;
+  }
+}
+.sp-off {
+  display: block;
+  @include respond(sp) {
+    display: none;
+  }
+}
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="email"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+ul {
+  display: flex;
+  @include respond(sp) {
+    display: block;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.opacity {
+  opacity: 0 !important;
+}
+
+.space {
+  min-height: 200vh;
+}

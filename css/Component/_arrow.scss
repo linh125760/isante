@@ -1,0 +1,12 @@
+.arrow {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 2px solid $color-text-title;
+  border-left: 2px solid $color-text-title;
+  margin: 0 1rem;
+}
+
+.right {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
